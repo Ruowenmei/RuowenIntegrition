@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="person_item_line">#ebebeb</color>
+    <color name="like_item_des_gray">#848484</color>
+    <color name="like_item_salary_red">#fe5c36</color>
+    <color name="like_item_welfare_blue">#37acf4</color>
+    <color name="like_item_welfare_yellow">#fc812f</color>
+    <color name="hot_job_divider_color">#ebebeb</color>
+</resources>
