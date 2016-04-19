@@ -4,19 +4,19 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    tools:context="com.ruowen.listviewdemo.MainActivity">
+    tools:context=".activity.AsyncTaskLeakActivity">
 
     <Button
-        android:id="@+id/btnListViewAndHandler"
+        android:id="@+id/btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="ListViewAndHandler" />
+        android:text="跳转"/>
 
-    <Button
-        android:id="@+id/btnAsyncTask"
+    <TextView
+        android:id="@+id/tv_text"
+        android:layout_marginTop="40dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="AsyncTask" />
+        android:text="async test"/>
 
 </LinearLayout>
