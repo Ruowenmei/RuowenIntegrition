@@ -1,6 +1,6 @@
-package com.ruowen.listviewdemo.bean;
+package com.ruowen.ruowendemo.multitypelistview.bean;
 
-import com.ruowen.listviewdemo.bean.base.BaseBean;
+import com.ruowen.ruowendemo.multitypelistview.bean.base.BaseBean;
 
 import java.io.Serializable;
 

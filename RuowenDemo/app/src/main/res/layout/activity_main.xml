@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    tools:context="com.ruowen.listviewdemo.MainActivity">
+    tools:context="com.ruowen.ruowendemo.MainActivity">
 
     <Button
         android:id="@+id/btnListViewAndHandler"
@@ -18,5 +18,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="AsyncTask" />
+
+    <Button
+        android:id="@+id/btnSelfView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SelfDefineView" />
 
 </LinearLayout>

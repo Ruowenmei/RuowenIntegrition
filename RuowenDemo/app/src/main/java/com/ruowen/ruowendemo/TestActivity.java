@@ -1,11 +1,9 @@
-package com.ruowen.listviewdemo.activity;
+package com.ruowen.ruowendemo;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
-
-import com.ruowen.listviewdemo.R;
 
 public class TestActivity extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package com.ruowen.listviewdemo;
+package com.ruowen.ruowendemo;
 
 import android.app.Application;
 

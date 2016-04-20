@@ -1,8 +1,6 @@
-package com.ruowen.listviewdemo.activity;
+package com.ruowen.ruowendemo.asynctaskleak;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,11 +9,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.ruowen.listviewdemo.R;
+import com.ruowen.ruowendemo.R;
+import com.ruowen.ruowendemo.TestActivity;
 
-import java.io.ByteArrayOutputStream;
-import java.io.EOFException;
-import java.io.InputStream;
 import java.lang.ref.WeakReference;
 
 public class AsyncTaskLeakActivity extends AppCompatActivity {

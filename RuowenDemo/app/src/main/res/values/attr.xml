@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--自定义控件MyView的属性-->
+    <attr name="newViewText" format="string" />
+    <attr name="newViewTextColor" format="color" />
+    <attr name="newViewTextSize" format="dimension" />
+    <attr name="newViewGravity" format="string" />
+
+    <declare-styleable name="MyViewStyle">
+        <attr name="newViewText" />
+        <attr name="newViewTextColor" />
+        <attr name="newViewTextSize" />
+        <attr name="newViewGravity" />
+    </declare-styleable>
+</resources>

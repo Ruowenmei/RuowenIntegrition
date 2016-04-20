@@ -1,4 +1,4 @@
-package com.ruowen.listviewdemo.activity;
+package com.ruowen.ruowendemo.multitypelistview;
 
 import android.content.Intent;
 import android.os.Handler;
@@ -11,14 +11,15 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.ruowen.listviewdemo.R;
-import com.ruowen.listviewdemo.adapter.ListViewAdapter;
-import com.ruowen.listviewdemo.bean.DividerBean;
-import com.ruowen.listviewdemo.bean.HotTitleBean;
-import com.ruowen.listviewdemo.bean.base.BaseBean;
-import com.ruowen.listviewdemo.bean.JobGuessLikeBean;
-import com.ruowen.listviewdemo.bean.TopTitleBean;
-import com.ruowen.listviewdemo.bean.base.TypeEnum;
+import com.ruowen.ruowendemo.R;
+import com.ruowen.ruowendemo.TestActivity;
+import com.ruowen.ruowendemo.multitypelistview.adapter.ListViewAdapter;
+import com.ruowen.ruowendemo.multitypelistview.bean.DividerBean;
+import com.ruowen.ruowendemo.multitypelistview.bean.HotTitleBean;
+import com.ruowen.ruowendemo.multitypelistview.bean.base.BaseBean;
+import com.ruowen.ruowendemo.multitypelistview.bean.JobGuessLikeBean;
+import com.ruowen.ruowendemo.multitypelistview.bean.TopTitleBean;
+import com.ruowen.ruowendemo.multitypelistview.bean.base.TypeEnum;
 
 import java.lang.ref.WeakReference;
 import java.util.ArrayList;

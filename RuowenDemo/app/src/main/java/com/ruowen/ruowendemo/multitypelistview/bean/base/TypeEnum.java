@@ -1,4 +1,4 @@
-package com.ruowen.listviewdemo.bean.base;
+package com.ruowen.ruowendemo.multitypelistview.bean.base;
 
 /**
  * Created by 58 on 2016/4/15.

@@ -1,4 +1,4 @@
-package com.ruowen.listviewdemo.adapter;
+package com.ruowen.ruowendemo.multitypelistview.adapter;
 
 import android.content.Context;
 import android.graphics.drawable.GradientDrawable;
@@ -10,13 +10,13 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.ruowen.listviewdemo.R;
-import com.ruowen.listviewdemo.bean.HotTitleBean;
-import com.ruowen.listviewdemo.bean.TopTitleBean;
-import com.ruowen.listviewdemo.bean.base.BaseBean;
-import com.ruowen.listviewdemo.bean.JobGuessLikeBean;
-import com.ruowen.listviewdemo.bean.base.TypeEnum;
-import com.ruowen.listviewdemo.util.DpUtils;
+import com.ruowen.ruowendemo.R;
+import com.ruowen.ruowendemo.multitypelistview.bean.HotTitleBean;
+import com.ruowen.ruowendemo.multitypelistview.bean.TopTitleBean;
+import com.ruowen.ruowendemo.multitypelistview.bean.base.BaseBean;
+import com.ruowen.ruowendemo.multitypelistview.bean.JobGuessLikeBean;
+import com.ruowen.ruowendemo.multitypelistview.bean.base.TypeEnum;
+import com.ruowen.ruowendemo.util.DpUtils;
 
 import java.util.List;
 

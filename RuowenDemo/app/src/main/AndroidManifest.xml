@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.ruowen.listviewdemo">
+    package="com.ruowen.ruowendemo">
 
     <application
         android:name=".MyApplication"
@@ -16,9 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.TestActivity" />
-        <activity android:name=".activity.AsyncTaskLeakActivity" />
-        <activity android:name=".activity.MultiTypeListViewActivity"></activity>
+        <activity android:name=".TestActivity" />
+        <activity android:name=".asynctaskleak.AsyncTaskLeakActivity" />
+        <activity android:name=".multitypelistview.MultiTypeListViewActivity" />
+        <activity android:name=".selfdefineview.SelfViewActivity"></activity>
     </application>
 
 </manifest>
