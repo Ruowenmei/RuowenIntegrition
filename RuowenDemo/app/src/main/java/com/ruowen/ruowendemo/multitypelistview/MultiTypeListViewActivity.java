@@ -123,12 +123,7 @@ public class MultiTypeListViewActivity extends AppCompatActivity {
     }
 
     private void testHandlerLeak(){
-        myHandler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                myHandler.sendEmptyMessage(1);
-            }
-        }, 30000);
+        myHandler.postDelayed(new MyThread(MultiTypeListViewActivity.this), 30000);
         /*handler.postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -155,6 +150,23 @@ public class MultiTypeListViewActivity extends AppCompatActivity {
         }
     };*/
 
+    static class MyThread implements Runnable{
+
+        private WeakReference<MultiTypeListViewActivity> weakReference;
+
+        public MyThread(MultiTypeListViewActivity activity){
+            weakReference = new WeakReference<>(activity);
+        }
+
+        @Override
+        public void run() {
+            final MultiTypeListViewActivity activity = weakReference.get();
+            if (null != activity) {//使用弱引用访问组件时，必须判断activity是否已经被回收
+                activity.myHandler.sendEmptyMessage(1);
+            }
+        }
+    }
+
     static class MyHandler extends Handler{
         private WeakReference<MultiTypeListViewActivity> activityWeakReference;//弱引用方式持有activity
 
@@ -165,7 +177,7 @@ public class MultiTypeListViewActivity extends AppCompatActivity {
         @Override
         public void handleMessage(Message msg) {
             final MultiTypeListViewActivity activity = activityWeakReference.get();
-            if (null != activity) {
+            if (null != activity) {//使用弱引用访问组件时，必须判断activity是否已经被回收
                 if (1 == msg.what) {
                     activity.tvText.setText("Hi, handler!");
                     Log.d("ruowen", "ruowen>>>>>>>>>>handler weakreference is not work");
