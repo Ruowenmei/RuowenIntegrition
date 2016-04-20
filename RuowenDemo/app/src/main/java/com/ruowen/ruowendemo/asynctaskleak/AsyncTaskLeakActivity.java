@@ -94,7 +94,7 @@ public class AsyncTaskLeakActivity extends AppCompatActivity {
         @Override
         protected void onPostExecute(byte[] result) {
             final AsyncTaskLeakActivity activity = weakReference.get();
-            if (null != activity) {
+            if (null != activity) {//使用弱引用访问组件时，必须判断activity是否已经被回收
                 activity.tvText.setText("call back");
                 Log.d("ruowen", "ruowen>>>>>>>>>>asynctask weakreference is not work");
             }else{

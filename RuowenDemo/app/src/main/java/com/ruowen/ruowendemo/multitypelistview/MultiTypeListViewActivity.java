@@ -75,7 +75,7 @@ public class MultiTypeListViewActivity extends AppCompatActivity {
 
     @Override
     protected void onDestroy() {
-        //handler.removeCallbacksAndMessages(null);//参数为null，移除handler的所有回调和发送的消息
+        //handler.removeCallbacksAndMessages(null);//参数为null，移除handler的所有回调和发送的消息，解决handler泄露方法之一
         super.onDestroy();
     }
 
@@ -106,7 +106,7 @@ public class MultiTypeListViewActivity extends AppCompatActivity {
             welfare.add("还好玩，有妹子~");
             JobGuessLikeBean jobGuessLikeBean = new JobGuessLikeBean(TypeEnum.HOT_ITEM,
                     "这是一个标题"+i,
-                    "这儿的地址是58",
+                    "这儿的地址是哈哈",
                     "福利几何",
                     recReason,
                     welfare);
