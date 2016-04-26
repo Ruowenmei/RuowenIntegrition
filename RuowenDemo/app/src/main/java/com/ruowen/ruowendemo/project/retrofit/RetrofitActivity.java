@@ -83,7 +83,7 @@ public class RetrofitActivity extends BaseActivity {
             @Override
             public void run() {
                 try {
-                Response<UserInfoBean> response = callSync.execute();//不能在主线程执行
+                Response<UserInfoBean> response = callSync.execute();//同步方法执行，不能在主线程执行
                     Log.d("ruowen", "ruowen>>>>>sync success");
                 }catch(IOException e){
                     e.printStackTrace();
