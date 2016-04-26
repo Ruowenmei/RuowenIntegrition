@@ -1,4 +1,4 @@
-package com.ruowen.ruowendemo.project.retrofit;
+package com.ruowen.ruowendemo.project.retrofit.bean;
 
 import java.io.Serializable;
 
