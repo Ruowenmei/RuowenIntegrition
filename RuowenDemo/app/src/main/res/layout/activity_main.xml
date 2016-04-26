@@ -31,4 +31,10 @@
         android:layout_height="wrap_content"
         android:text="RxJava" />
 
+    <Button
+        android:id="@+id/btnRetrofit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Retrofit" />
+
 </LinearLayout>

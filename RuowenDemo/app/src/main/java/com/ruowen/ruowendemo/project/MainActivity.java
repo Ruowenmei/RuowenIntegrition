@@ -9,6 +9,7 @@ import com.ruowen.ruowendemo.R;
 import com.ruowen.ruowendemo.project.asynctaskleak.AsyncTaskLeakActivity;
 import com.ruowen.ruowendemo.common.BaseActivity;
 import com.ruowen.ruowendemo.project.multitypelistview.MultiTypeListViewActivity;
+import com.ruowen.ruowendemo.project.retrofit.RetrofitActivity;
 import com.ruowen.ruowendemo.project.rxjava.RxJavaActivity;
 import com.ruowen.ruowendemo.project.selfdefineview.SelfViewActivity;
 
@@ -24,6 +25,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
     private Button btnAsyncTask;
     private Button btnSelfView;
     private Button btnRxJava;
+    private Button btnRetrofit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +46,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
         btnAsyncTask = (Button) findViewById(R.id.btnAsyncTask);
         btnSelfView = (Button)findViewById(R.id.btnSelfView);
         btnRxJava = (Button)findViewById(R.id.btnRxJava);
+        btnRetrofit = (Button)findViewById(R.id.btnRetrofit);
     }
 
     @Override
@@ -52,6 +55,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
         btnAsyncTask.setOnClickListener(this);
         btnSelfView.setOnClickListener(this);
         btnRxJava.setOnClickListener(this);
+        btnRetrofit.setOnClickListener(this);
     }
 
     @Override
@@ -71,6 +75,10 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
             break;
             case R.id.btnRxJava:{
                 turnToActivity("rxjava");
+            }
+            break;
+            case R.id.btnRetrofit:{
+                turnToActivity("retrofit");
             }
             break;
         }
@@ -98,6 +106,11 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
             break;
             case "rxjava":{
                 Intent intent = new Intent(MainActivity.this, RxJavaActivity.class);
+                startActivity(intent);
+            }
+            break;
+            case "retrofit":{
+                Intent intent = new Intent(MainActivity.this, RetrofitActivity.class);
                 startActivity(intent);
             }
             break;

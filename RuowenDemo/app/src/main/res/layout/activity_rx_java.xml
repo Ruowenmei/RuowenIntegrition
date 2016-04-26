@@ -14,11 +14,50 @@
         android:text="RxJava"/>
 
     <Button
+        android:id="@+id/btn_subscribe"
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="基础订阅方式"/>
+
+    <Button
+        android:id="@+id/btn_subscribe_thread"
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="多线程订阅方式"/>
+
+    <Button
+        android:id="@+id/btn_subscribe_map"
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="变换订阅方式——map"/>
+
+    <Button
+        android:id="@+id/btn_subscribe_flatMap"
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="变换订阅方式——map"/>
+
+    <Button
         android:id="@+id/btn"
         android:layout_marginTop="30dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:text="跳转"/>
+
+    <TextView
+        android:id="@+id/tv_display"
+        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"/>
 
 </LinearLayout>

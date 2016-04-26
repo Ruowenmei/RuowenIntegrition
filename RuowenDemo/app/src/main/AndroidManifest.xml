@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.ruowen.ruowendemo">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+
     <application
         android:name=".project.MyApplication"
         android:allowBackup="true"
@@ -21,7 +23,7 @@
         <activity android:name=".project.multitypelistview.MultiTypeListViewActivity" />
         <activity android:name=".project.selfdefineview.SelfViewActivity" />
         <activity android:name=".project.rxjava.RxJavaActivity" />
-        <activity android:name=".common.BaseActivity"></activity>
+        <activity android:name=".project.retrofit.RetrofitActivity"></activity>
     </application>
 
 </manifest>
