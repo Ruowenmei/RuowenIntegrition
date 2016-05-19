@@ -11,10 +11,15 @@ import com.ruowen.ruowendemo.project.config.URLConfig;
 import com.ruowen.ruowendemo.project.retrofit.api.UserInfo;
 import com.ruowen.ruowendemo.project.retrofit.bean.UserInfoBean;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
+import okhttp3.Cache;
+import okhttp3.CacheControl;
+import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
+import okhttp3.Request;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -56,12 +61,17 @@ public class RetrofitActivity extends BaseActivity {
 
     @Override
     protected void processLogic() {
+        //缓存目录
+        File cacheFile = new File(getApplicationContext().getCacheDir(), "RetrofitUserInfo");
+        Cache cache = new Cache(cacheFile, 1024 * 10);//10M
+
         //配置okHttp请求设置
         OkHttpClient client = new OkHttpClient.Builder()
                 .retryOnConnectionFailure(true)//失败重试
                 .connectTimeout(5, TimeUnit.SECONDS)//超时设置
                 .addNetworkInterceptor(AddHeaderInterceptor.TokenInterceptor)//拦截器，让所有的请求都加上token
-                .cache(null)//设置缓存
+                //.addInterceptor(REWRITE_CACHE_CONTROL_INTERCEPTOR)//缓存使用控制策略，目前不是很清楚配置
+                .cache(cache)//设置缓存
                 .build();
 
         //retrofit配置
@@ -112,4 +122,24 @@ public class RetrofitActivity extends BaseActivity {
             }
         });
     }
+
+    /**
+     * 云端响应头拦截器，用来配置缓存策略
+     * Dangerous interceptor that rewrites the server's cache-control header.
+     */
+    private final Interceptor REWRITE_CACHE_CONTROL_INTERCEPTOR = new Interceptor() {
+        @Override
+        public okhttp3.Response intercept(Chain chain) throws IOException {
+            Request request = chain.request();
+            request = request.newBuilder()
+                    .cacheControl(CacheControl.FORCE_CACHE)
+                    .build();
+            okhttp3.Response originalResponse = chain.proceed(request);
+
+            return originalResponse.newBuilder()
+                    .header("Cache-Control", "public, max-stale=40")
+                    .removeHeader("Pragma")
+                    .build();
+        }
+    };
 }

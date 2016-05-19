@@ -10,8 +10,12 @@ import com.ruowen.ruowendemo.project.asynctaskleak.AsyncTaskLeakActivity;
 import com.ruowen.ruowendemo.common.BaseActivity;
 import com.ruowen.ruowendemo.project.multitypelistview.MultiTypeListViewActivity;
 import com.ruowen.ruowendemo.project.retrofit.RetrofitActivity;
+import com.ruowen.ruowendemo.project.retrofitandrxjava.RetrofitAndRxJavaActivity;
 import com.ruowen.ruowendemo.project.rxjava.RxJavaActivity;
+import com.ruowen.ruowendemo.project.selfdefineview.CanvasUseActivity;
+import com.ruowen.ruowendemo.project.selfdefineview.DragViewActivity;
 import com.ruowen.ruowendemo.project.selfdefineview.SelfViewActivity;
+import com.ruowen.ruowendemo.project.selfdefineview.SlipLayoutActivity;
 
 /**
  * Date : 2016.04.19
@@ -26,6 +30,10 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
     private Button btnSelfView;
     private Button btnRxJava;
     private Button btnRetrofit;
+    private Button btnRetrofitAndRxJava;
+    private Button btnDragView;
+    private Button btnSlipLayout;
+    private Button btnCanvasUse;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +55,10 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
         btnSelfView = (Button)findViewById(R.id.btnSelfView);
         btnRxJava = (Button)findViewById(R.id.btnRxJava);
         btnRetrofit = (Button)findViewById(R.id.btnRetrofit);
+        btnRetrofitAndRxJava = (Button)findViewById(R.id.btnRetrofitAndRxJava);
+        btnDragView = (Button)findViewById(R.id.btnDragView);
+        btnSlipLayout = (Button)findViewById(R.id.btnSlipLayout);
+        btnCanvasUse = (Button)findViewById(R.id.btnCanvasUse);
     }
 
     @Override
@@ -56,6 +68,10 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
         btnSelfView.setOnClickListener(this);
         btnRxJava.setOnClickListener(this);
         btnRetrofit.setOnClickListener(this);
+        btnRetrofitAndRxJava.setOnClickListener(this);
+        btnDragView.setOnClickListener(this);
+        btnSlipLayout.setOnClickListener(this);
+        btnCanvasUse.setOnClickListener(this);
     }
 
     @Override
@@ -79,6 +95,22 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
             break;
             case R.id.btnRetrofit:{
                 turnToActivity("retrofit");
+            }
+            break;
+            case R.id.btnRetrofitAndRxJava:{
+                turnToActivity("retrofitandrxjava");
+            }
+            break;
+            case R.id.btnDragView:{
+                turnToActivity("dragview");
+            }
+            break;
+            case R.id.btnSlipLayout:{
+                turnToActivity("sliplayout");
+            }
+            break;
+            case R.id.btnCanvasUse:{
+                turnToActivity("canvasuse");
             }
             break;
         }
@@ -111,6 +143,26 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
             break;
             case "retrofit":{
                 Intent intent = new Intent(MainActivity.this, RetrofitActivity.class);
+                startActivity(intent);
+            }
+            break;
+            case "retrofitandrxjava":{
+                Intent intent = new Intent(MainActivity.this, RetrofitAndRxJavaActivity.class);
+                startActivity(intent);
+            }
+            break;
+            case "dragview":{
+                Intent intent = new Intent(MainActivity.this, DragViewActivity.class);
+                startActivity(intent);
+            }
+            break;
+            case "sliplayout":{
+                Intent intent = new Intent(MainActivity.this, SlipLayoutActivity.class);
+                startActivity(intent);
+            }
+            break;
+            case "canvasuse":{
+                Intent intent = new Intent(MainActivity.this, CanvasUseActivity.class);
                 startActivity(intent);
             }
             break;
