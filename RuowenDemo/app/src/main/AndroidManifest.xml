@@ -3,6 +3,18 @@
     package="com.ruowen.ruowendemo">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 拍照 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 使用照相机权限 -->
+    <uses-feature android:name="android.hardware.camera" />
+    <!-- 自动聚焦权限 -->
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <!-- 录音 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- 控制振动器 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- 修改/删除 SD 卡中的内容 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:name=".project.MyApplication"
@@ -18,7 +30,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".project.TestActivity" />
+        <activity
+            android:name=".project.TestActivity"
+            android:launchMode="singleTop" />
         <activity android:name=".project.asynctaskleak.AsyncTaskLeakActivity" />
         <activity android:name=".project.multitypelistview.MultiTypeListViewActivity" />
         <activity android:name=".project.selfdefineview.SelfViewActivity" />
@@ -27,7 +41,32 @@
         <activity android:name=".project.retrofitandrxjava.RetrofitAndRxJavaActivity" />
         <activity android:name=".project.selfdefineview.DragViewActivity" />
         <activity android:name=".project.selfdefineview.SlipLayoutActivity" />
-        <activity android:name=".project.selfdefineview.CanvasUseActivity"></activity>
+        <activity android:name=".project.selfdefineview.CanvasUseActivity" />
+        <activity android:name=".project.selfdefineview.ColorMatrixActivity" />
+        <activity android:name=".project.selfdefineview.WavingFlagActivity" />
+        <activity
+            android:name=".project.camera.JobShotIdCardActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name=".project.camera.JobPreviewPhotoActivity" />
+        <activity
+            android:name=".project.camera.BaiduCameraActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity
+            android:name=".project.camera.SensorCameraActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name=".project.myslidingdrawer.SlidingDrawerActivity" />
+        <activity android:name=".project.nativetest.JNITestActivity" />
+        <activity android:name=".project.viewtoimage.ViewToImageActivity" />
+        <activity android:name=".project.lottie.LottieActivity" />
+        <activity android:name=".project.RecyclerView.RecycleViewActivity" />
+        <activity android:name=".project.thread.AsyncTaskActivity" />
+
+        <service android:name=".project.thread.LocalIntentService" />
+
+        <activity android:name=".project.thread.ThreadPoolActivity" />
+        <activity android:name=".project.hook.ProxyActivity" />
+        <activity android:name=".project.selfdefineview.ViewGroupActivity" />
+        <activity android:name=".project.imageloader.ImageLoaderActivity"></activity>
     </application>
 
 </manifest>

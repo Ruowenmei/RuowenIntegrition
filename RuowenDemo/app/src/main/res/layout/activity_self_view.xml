@@ -25,8 +25,17 @@
     <com.ruowen.ruowendemo.project.selfdefineview.view.MyAudioView
         android:layout_marginTop="30dp"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="200dp"
         android:layout_gravity="center"
         android:padding="20dp" />
+
+    <com.ruowen.ruowendemo.project.selfdefineview.view.CircleView
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        myview:circle_color="#00ff00"
+        android:background="#ffffff"/>
+
 
 </LinearLayout>

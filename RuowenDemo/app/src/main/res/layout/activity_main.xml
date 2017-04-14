@@ -1,63 +1,154 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center"
-    tools:context=".project.MainActivity">
+    android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/btnListViewAndHandler"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ListView And Handler" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        tools:context=".project.MainActivity">
 
-    <Button
-        android:id="@+id/btnAsyncTask"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="AsyncTask" />
+        <Button
+            android:id="@+id/btnListViewAndHandler"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ListView And Handler" />
 
-    <Button
-        android:id="@+id/btnSelfView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="SelfDefineView" />
+        <Button
+            android:id="@+id/btnAsyncTask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AsyncTask" />
 
-    <Button
-        android:id="@+id/btnRxJava"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="RxJava" />
+        <Button
+            android:id="@+id/btnSelfView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SelfDefineView" />
 
-    <Button
-        android:id="@+id/btnRetrofit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Retrofit" />
+        <Button
+            android:id="@+id/btnRxJava"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RxJava" />
 
-    <Button
-        android:id="@+id/btnRetrofitAndRxJava"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Retrofit And RxJava" />
+        <Button
+            android:id="@+id/btnRetrofit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Retrofit" />
 
-    <Button
-        android:id="@+id/btnDragView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="DragView" />
+        <Button
+            android:id="@+id/btnRetrofitAndRxJava"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Retrofit And RxJava" />
 
-    <Button
-        android:id="@+id/btnSlipLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="SLIPLAYOUT" />
+        <Button
+            android:id="@+id/btnDragView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DragView" />
 
-    <Button
-        android:id="@+id/btnCanvasUse"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="CANVAS USE" />
-</LinearLayout>
+        <Button
+            android:id="@+id/btnSlipLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SLIPLAYOUT" />
+
+        <Button
+            android:id="@+id/btnCanvasUse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CANVAS USE" />
+
+        <Button
+            android:id="@+id/btnColorMatrix"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ColorMatrix" />
+
+        <Button
+            android:id="@+id/btnWavingFlag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="WAVING FLAG" />
+
+        <Button
+            android:id="@+id/btnCamera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Camera" />
+
+        <Button
+            android:id="@+id/btnBaiCamera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bai Camera" />
+
+        <Button
+            android:id="@+id/btnSensorCamera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sensor Camera" />
+
+        <Button
+            android:id="@+id/btnSlidingDrawer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sliding Drawer" />
+
+        <Button
+            android:id="@+id/btnViewImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View To Image" />
+
+        <Button
+            android:id="@+id/btnAnimTest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Animation Test" />
+
+        <Button
+            android:id="@+id/btnLottie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lottie Test" />
+
+        <Button
+            android:id="@+id/btnRecycle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RecycleView" />
+
+        <Button
+            android:id="@+id/btnAsync"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AsyncTask" />
+
+
+        <Button
+            android:id="@+id/btnUnMani"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UnMani" />
+
+        <Button
+            android:id="@+id/btnViewGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ViewGroup" />
+
+        <Button
+            android:id="@+id/btnImageLoad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ImageLoader" />
+    </LinearLayout>
+</ScrollView>

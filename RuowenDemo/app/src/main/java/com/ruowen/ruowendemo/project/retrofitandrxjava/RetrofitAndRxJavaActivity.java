@@ -1,27 +1,19 @@
 package com.ruowen.ruowendemo.project.retrofitandrxjava;
 
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.TextView;
 
 import com.ruowen.ruowendemo.R;
 import com.ruowen.ruowendemo.common.BaseActivity;
-import com.ruowen.ruowendemo.project.MyApplication;
+import com.ruowen.ruowendemo.common.log.L;
 import com.ruowen.ruowendemo.project.config.URLConfig;
 import com.ruowen.ruowendemo.project.retrofit.AddHeaderInterceptor;
 import com.ruowen.ruowendemo.project.retrofitandrxjava.api.UserInfo;
 import com.ruowen.ruowendemo.project.retrofitandrxjava.bean.UserInfoBean;
 
-import java.io.File;
-import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
-import okhttp3.Cache;
-import okhttp3.CacheControl;
-import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
-import okhttp3.Request;
-import okhttp3.Response;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
@@ -100,17 +92,17 @@ public class RetrofitAndRxJavaActivity extends BaseActivity {
                 @Override
                 public void onNext(String s) {
                     tvUser.setText(s);
-                    Log.d(MyApplication.TAG, "ruowen>>>>>"+s);
+                    L.d(s);
                 }
 
                 @Override
                 public void onCompleted() {
-                    Log.d(MyApplication.TAG, "ruowen>>>>>onCompleted");
+
                 }
 
                 @Override
                 public void onError(Throwable e) {
-                    Log.d(MyApplication.TAG, "ruowen>>>>>onError   "+e.getMessage());
+                    L.d(e.getMessage());
                 }
             });
     }

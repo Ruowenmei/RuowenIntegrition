@@ -6,6 +6,7 @@ import android.widget.TextView;
 
 import com.ruowen.ruowendemo.R;
 import com.ruowen.ruowendemo.common.BaseActivity;
+import com.ruowen.ruowendemo.common.log.L;
 import com.ruowen.ruowendemo.project.MyApplication;
 import com.ruowen.ruowendemo.project.config.URLConfig;
 import com.ruowen.ruowendemo.project.retrofit.api.UserInfo;
@@ -106,7 +107,7 @@ public class RetrofitActivity extends BaseActivity {
         callASync.enqueue(new Callback<UserInfoBean>() {//enqueue异步请求，可以cancel
             @Override
             public void onResponse(Call<UserInfoBean> call, Response<UserInfoBean> response) {
-                Log.d(MyApplication.TAG, "ruowen>>>>>>>>code="+response.code()
+                L.d("code="+response.code()
                         +"\nmessage="+response.message()
                         +"\nheader="+response.headers());
                 UserInfoBean userInfoBean = response.body();
@@ -117,7 +118,7 @@ public class RetrofitActivity extends BaseActivity {
 
             @Override
             public void onFailure(Call<UserInfoBean> call, Throwable t) {
-                Log.d(MyApplication.TAG, "failure ruowen>>>>>>>>>>"+t.getMessage());
+                L.d(t.getMessage());
                 tvUser.setText("failure");
             }
         });
