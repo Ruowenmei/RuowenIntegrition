@@ -43,6 +43,7 @@ public class MultiTypeListViewActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.d("zhengbin02", "zhengbin02>>>>>>>>>onCreate");
     }
 
     @Override

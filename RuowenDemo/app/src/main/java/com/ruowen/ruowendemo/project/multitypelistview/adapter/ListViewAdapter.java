@@ -91,7 +91,7 @@ public class ListViewAdapter extends BaseAdapter {
                     hotTitleHolder = new HotTitleHolder();
                     convertView = inflater.inflate(R.layout.hot_title, null);
                     hotTitleHolder.tvTitle = (TextView) convertView.findViewById(R.id.tv_title);
-                    convertView.setTag(hotTitleHolder);
+                    convertView.setTag(hotTitleHolder);//多类型时，可能使用这个方法会有bug,应该使用setTag(key, tag)这个方法
 
                 }else {
                     hotTitleHolder = (HotTitleHolder)convertView.getTag();

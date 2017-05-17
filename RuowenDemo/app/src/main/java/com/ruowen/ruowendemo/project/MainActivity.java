@@ -6,16 +6,31 @@ import android.view.View;
 import android.widget.Button;
 
 import com.ruowen.ruowendemo.R;
-import com.ruowen.ruowendemo.project.asynctaskleak.AsyncTaskLeakActivity;
 import com.ruowen.ruowendemo.common.BaseActivity;
+import com.ruowen.ruowendemo.common.util.LogUtils;
+import com.ruowen.ruowendemo.project.RecyclerView.RecycleViewActivity;
+import com.ruowen.ruowendemo.project.asynctaskleak.AsyncTaskLeakActivity;
+import com.ruowen.ruowendemo.project.camera.BaiduCameraActivity;
+import com.ruowen.ruowendemo.project.camera.JobShotIdCardActivity;
+import com.ruowen.ruowendemo.project.camera.SensorCameraActivity;
+import com.ruowen.ruowendemo.project.hook.UnManifestActivity;
+import com.ruowen.ruowendemo.project.imageloader.ImageLoaderActivity;
+import com.ruowen.ruowendemo.project.lottie.LottieActivity;
 import com.ruowen.ruowendemo.project.multitypelistview.MultiTypeListViewActivity;
+import com.ruowen.ruowendemo.project.myslidingdrawer.SlidingDrawerActivity;
 import com.ruowen.ruowendemo.project.retrofit.RetrofitActivity;
 import com.ruowen.ruowendemo.project.retrofitandrxjava.RetrofitAndRxJavaActivity;
 import com.ruowen.ruowendemo.project.rxjava.RxJavaActivity;
 import com.ruowen.ruowendemo.project.selfdefineview.CanvasUseActivity;
+import com.ruowen.ruowendemo.project.selfdefineview.ColorMatrixActivity;
 import com.ruowen.ruowendemo.project.selfdefineview.DragViewActivity;
 import com.ruowen.ruowendemo.project.selfdefineview.SelfViewActivity;
 import com.ruowen.ruowendemo.project.selfdefineview.SlipLayoutActivity;
+import com.ruowen.ruowendemo.project.selfdefineview.ViewGroupActivity;
+import com.ruowen.ruowendemo.project.selfdefineview.WavingFlagActivity;
+import com.ruowen.ruowendemo.project.thread.AsyncTaskActivity;
+import com.ruowen.ruowendemo.project.transanim.TransanimActivity;
+import com.ruowen.ruowendemo.project.viewtoimage.ViewToImageActivity;
 
 /**
  * Date : 2016.04.19
@@ -34,6 +49,21 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
     private Button btnDragView;
     private Button btnSlipLayout;
     private Button btnCanvasUse;
+    private Button btnColorMatrix;
+    private Button btnWavingFlag;
+    private Button btnCamera;
+    private Button btnBaiCamera;
+    private Button btnSensorCamera;
+    private Button btnSlidingDrawer;
+    private Button btnViewImage;
+    private Button btnAnimTest;
+    private Button btnLottieTest;
+    private Button btnRecycleView;
+    private Button btnAsync;
+    private Button btnUnMani;
+    private Button btnViewGroup;
+    private Button btnImageLoad;
+    private Button btnTransAnim;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,6 +89,21 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
         btnDragView = (Button)findViewById(R.id.btnDragView);
         btnSlipLayout = (Button)findViewById(R.id.btnSlipLayout);
         btnCanvasUse = (Button)findViewById(R.id.btnCanvasUse);
+        btnColorMatrix = (Button)findViewById(R.id.btnColorMatrix);
+        btnWavingFlag = (Button)findViewById(R.id.btnWavingFlag);
+        btnCamera = (Button)findViewById(R.id.btnCamera);
+        btnBaiCamera = (Button)findViewById(R.id.btnBaiCamera);
+        btnSensorCamera = (Button)findViewById(R.id.btnSensorCamera);
+        btnSlidingDrawer = (Button)findViewById(R.id.btnSlidingDrawer);
+        btnViewImage = (Button)findViewById(R.id.btnViewImage);
+        btnAnimTest = (Button)findViewById(R.id.btnAnimTest);
+        btnLottieTest = (Button)findViewById(R.id.btnLottie);
+        btnRecycleView = (Button)findViewById(R.id.btnRecycle);
+        btnAsync = (Button)findViewById(R.id.btnAsync);
+        btnUnMani = (Button)findViewById(R.id.btnUnMani);
+        btnViewGroup = (Button)findViewById(R.id.btnViewGroup);
+        btnImageLoad = (Button)findViewById(R.id.btnImageLoad);
+        btnTransAnim = (Button)findViewById(R.id.btnTranAnim);
     }
 
     @Override
@@ -72,6 +117,21 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
         btnDragView.setOnClickListener(this);
         btnSlipLayout.setOnClickListener(this);
         btnCanvasUse.setOnClickListener(this);
+        btnColorMatrix.setOnClickListener(this);
+        btnWavingFlag.setOnClickListener(this);
+        btnCamera.setOnClickListener(this);
+        btnBaiCamera.setOnClickListener(this);
+        btnSensorCamera.setOnClickListener(this);
+        btnSlidingDrawer.setOnClickListener(this);
+        btnViewImage.setOnClickListener(this);
+        btnAnimTest.setOnClickListener(this);
+        btnLottieTest.setOnClickListener(this);
+        btnRecycleView.setOnClickListener(this);
+        btnAsync.setOnClickListener(this);
+        btnUnMani.setOnClickListener(this);
+        btnViewGroup.setOnClickListener(this);
+        btnImageLoad.setOnClickListener(this);
+        btnTransAnim.setOnClickListener(this);
     }
 
     @Override
@@ -111,6 +171,66 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
             break;
             case R.id.btnCanvasUse:{
                 turnToActivity("canvasuse");
+            }
+            break;
+            case R.id.btnColorMatrix:{
+                turnToActivity("colormatrix");
+            }
+            break;
+            case R.id.btnWavingFlag:{
+                turnToActivity("wavingflag");
+            }
+            break;
+            case R.id.btnCamera:{
+                turnToActivity("camera");
+            }
+            break;
+            case R.id.btnBaiCamera:{
+                turnToActivity("baicamera");
+            }
+            break;
+            case R.id.btnSensorCamera:{
+                turnToActivity("sensorcamera");
+            }
+            break;
+            case R.id.btnSlidingDrawer:{
+                turnToActivity("slidingdrawer");
+            }
+            break;
+            case R.id.btnViewImage:{
+                turnToActivity("viewimage");
+            }
+            break;
+            case R.id.btnAnimTest:{
+                turnToActivity("animtest");
+            }
+            break;
+            case R.id.btnLottie:{
+                turnToActivity("lottietest");
+            }
+            break;
+            case R.id.btnRecycle:{
+                turnToActivity("recycleview");
+            }
+            break;
+            case R.id.btnAsync:{
+                turnToActivity("async");
+            }
+            break;
+            case R.id.btnUnMani:{
+                turnToActivity("unmani");
+            }
+            break;
+            case R.id.btnViewGroup:{
+                turnToActivity("viewgroup");
+            }
+            break;
+            case R.id.btnImageLoad:{
+                turnToActivity("imageload");
+            }
+            break;
+            case R.id.btnTranAnim:{
+                turnToActivity("transanim");
             }
             break;
         }
@@ -166,6 +286,95 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
                 startActivity(intent);
             }
             break;
+            case "colormatrix":{
+                Intent intent = new Intent(MainActivity.this, ColorMatrixActivity.class);
+                startActivity(intent);
+            }
+            break;
+            case "wavingflag":{
+                Intent intent = new Intent(MainActivity.this, WavingFlagActivity.class);
+                startActivity(intent);
+            }
+            break;
+            case "camera":{
+                Intent intent = new Intent(MainActivity.this, JobShotIdCardActivity.class);
+                intent.putExtra(JobShotIdCardActivity.SOURCE, JobShotIdCardActivity.SOURCE_ID_CARD_INSIGNIA);
+                startActivity(intent);
+            }
+            break;
+            case "baicamera":{
+                Intent intent = new Intent(MainActivity.this, BaiduCameraActivity.class);
+                intent.putExtra(BaiduCameraActivity.SOURCE, BaiduCameraActivity.SOURCE_ID_CARD_INSIGNIA);
+                startActivity(intent);
+            }
+            break;
+            case "sensorcamera":{
+                Intent intent = new Intent(MainActivity.this, SensorCameraActivity.class);
+                intent.putExtra(SensorCameraActivity.SOURCE, SensorCameraActivity.SOURCE_HALF_BODY);
+                startActivity(intent);
+            }
+            break;
+            case "slidingdrawer":{
+                Intent intent = new Intent(MainActivity.this, SlidingDrawerActivity.class);
+                startActivity(intent);
+            }
+            break;
+            case "viewimage":{
+                Intent intent = new Intent(MainActivity.this, ViewToImageActivity.class);
+                startActivity(intent);
+            }
+            break;
+            case "animtest":{
+                Intent intent = new Intent(MainActivity.this, TestActivity.class);
+                startActivity(intent);
+            }
+            break;
+            case "lottietest":{
+                Intent intent = new Intent(MainActivity.this, LottieActivity.class);
+                startActivity(intent);
+            }
+            break;
+            case "recycleview":{
+                Intent intent = new Intent(MainActivity.this, RecycleViewActivity.class);
+                startActivity(intent);
+            }
+            break;
+            case "async":{
+                Intent intent = new Intent(MainActivity.this, AsyncTaskActivity.class);
+                startActivity(intent);
+            }
+            break;
+            case "unmani":{
+                Intent intent = new Intent(MainActivity.this, UnManifestActivity.class);
+                intent.putExtra("proxy", true);
+                startActivity(intent);
+            }
+            break;
+            case "viewgroup":{
+                Intent intent = new Intent(MainActivity.this, ViewGroupActivity.class);
+                startActivity(intent);
+            }
+            break;
+            case "imageload":{
+                Intent intent = new Intent(MainActivity.this, ImageLoaderActivity.class);
+                startActivity(intent);
+            }
+            break;
+            case "transanim":{
+                Intent intent = new Intent(MainActivity.this, TransanimActivity.class);
+                startActivity(intent);
+            }
+            break;
         }
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onPause();
     }
 }

@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.ruowen.ruowendemo.common.BaseActivity;
+import com.ruowen.ruowendemo.common.log.L;
 import com.ruowen.ruowendemo.project.MyApplication;
 import com.ruowen.ruowendemo.R;
 import com.ruowen.ruowendemo.project.TestActivity;
@@ -91,7 +92,7 @@ public class RxJavaActivity extends BaseActivity implements View.OnClickListener
                         @Override
                         public void call(String s) {
                             tvDisplay.setText(s);
-                            Log.d(MyApplication.TAG, "ruowen>>>>>>>>>>>>>"+s);
+                            L.d(s);
                         }
                     });
             }
@@ -124,7 +125,7 @@ public class RxJavaActivity extends BaseActivity implements View.OnClickListener
                             try {
                                 Thread.sleep(2000);
                             }catch (Exception e){
-                                Log.d(MyApplication.TAG, "ruowen>>>>>Thread Exception");
+                                L.d(e.getMessage());
                             }
 
                             return str;
@@ -135,7 +136,7 @@ public class RxJavaActivity extends BaseActivity implements View.OnClickListener
                     .subscribe(new Action1<String>() {
                         @Override
                         public void call(String s) {
-                            Log.d(MyApplication.TAG, "ruowen>>>>>>>>>>>"+s);
+                            L.d(s);
                         }
                     });
             }
@@ -170,17 +171,16 @@ public class RxJavaActivity extends BaseActivity implements View.OnClickListener
 
         @Override
         public void onNext(String s) {
-            Log.d(MyApplication.TAG, "ruowen>>>>>>>>>>>>> onNext"+s);
+            L.d(s);
         }
 
         @Override
         public void onCompleted() {
-            Log.d(MyApplication.TAG, "ruowen>>>>>>>>>>>>> onCompleted");
         }
 
         @Override
         public void onError(Throwable e) {
-            Log.d(MyApplication.TAG, "ruowen>>>>>>>>>>>> onError");
+            L.d("onError");
         }
     };
 }
